@@ -731,7 +731,7 @@
         	}
 
         	function getAdminLog() {
-        		$q = "SELECT id,user,log,time from " . TB_PREFIX . "admin_log where id != 0 ORDER BY id ASC";
+        		$q = "SELECT id,user,log,time from " . TB_PREFIX . "admin_log where id != 0 ORDER BY id DESC";
         		$result = mysql_query($q, $this->connection);
         		return $this->mysql_fetch_all($result);
         	}
